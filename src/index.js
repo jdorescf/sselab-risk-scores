@@ -82,6 +82,7 @@ async function handleRequest(request, env) {
 
 	// This is the body of the payload that will update the list
 	const jsonOutput = JSON.stringify(ztListResult);
+	console.log("This is the body of the payload that will update the list: "+jsonOutput)
 
 	// STEP 03 - Update the ZT lists
 	const response = await fetch(gwListUpdate, {
