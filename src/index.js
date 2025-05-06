@@ -48,7 +48,7 @@ async function handleRequest(request, env) {
 		  }
 	  });
 	let userRiskScoresData = await userRiskScoresResponse.json();
-	//console.log("The user risk score data I got from the API: "+userRiskScoresData.result)
+	console.log("The user risk score data I got from the API: "+userRiskScoresData.result)
 
 	// STEP 02 - create the JSON file to update the user-risk-scores list
 	const ztListResult = {"remove": [], "append": []}
@@ -73,7 +73,7 @@ async function handleRequest(request, env) {
 	});
 	let gwCleanData = await gwCleanResponse.json();
 	  
-	//console.log("The data I need to clean from the list: "+gwCleanData.result)
+	console.log("The data I need to clean from the list: "+gwCleanData.result)
 	if (gwCleanData.result != null){
 		for (let entry of gwCleanData.result) {
 		  ztListResult.remove.push(entry.value)
