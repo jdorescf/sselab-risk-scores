@@ -1,0 +1,25 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "user-risk-scores",
+	"main": "src/index.js",
+	"compatibility_date": "2025-02-24",
+	"observability": {
+		"enabled": true
+	},
+  "vars": { 
+    "LIST_ID": "8eb1b2ff-b341-4317-82aa-02d4429f694b"
+  },
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "routes": [
+    {
+      "pattern": "user-risk-scores.sselab.cloud",
+      "custom_domain": true
+    }
+  ],
+  "workers_dev": false,
+  "preview_urls": false
+}
